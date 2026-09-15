@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <RootNamespace>Sonban.Common</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+  </PropertyGroup>
+
+</Project>

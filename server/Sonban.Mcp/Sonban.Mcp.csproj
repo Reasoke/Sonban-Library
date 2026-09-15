@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <RootNamespace>Sonban.Mcp</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.7" />
+    <PackageReference Include="ModelContextProtocol" Version="1.3.0" />
+    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="1.3.0" />
+    <PackageReference Include="ModelContextProtocol.Core" Version="1.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sonban.Common\Sonban.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\launchSettings.json">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
